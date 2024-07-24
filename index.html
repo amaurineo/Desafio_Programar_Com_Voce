@@ -16,7 +16,7 @@
         <h1 class="text-brand">Code<spam>Lab</spam></h1>
         <!-- form-control é uma estilização do bootstrap
              ; my = margem do eixo y-->
-        <input type="text" class="form-control custom-input w-60 my-3" placeholder="pesquisar no blog">
+        <input type="text" id="searchInput" class="form-control custom-input w-60 my-3" placeholder="pesquisar no blog">
     </div>
     <!-- container é um component do bootstrap; mt = margin-top; mp = margin-bottom -->
     <div class="container mt-4 d-flex align-items-center flex-column">
@@ -52,6 +52,27 @@
             icon.classList.toggle('bi-heart-fill');
             icon.closest('.blog-post').classList.toggle('border-brand');
         }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            const searchInput = document.getElementById('searchInput');
+            const blogPosts = document.querySelectorAll('.blog-post');
+
+            searchInput.addEventListener('input',function() {
+                const query = searchInput.value.toLowerCase();
+
+                blogPosts.forEach(post => {
+                    const title = post.querySelector('.blog-post-title').textContent.toLowerCase();
+                const text = post.querySelector('.blog-post-text').textContent.toLowerCase();
+
+                if(title.includes(query) || text.includes(query)){
+                    post.style.display = 'block';
+                }else{
+                    post.style.display = 'none';
+                }
+                });
+            });
+        });
     </script>
 </body>
 </html>
