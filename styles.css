@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --brand-color: #e07b67;
+
+  --dark-10: #121214;
+  --dark-20: #17171a;
+  --dark-30: #202024;
+  --dark-40: #252529;
+
+  --gray: #afabb6;
+  --white: #ffffff;
+}
+
+body.custom-bg {
+  background-color: var(--dark-10);
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.custom-text, spam{
+    color: var(--white);
+}
+
+.text-brand{
+    color: var(--brand-color);
+}
+
+.custom-input{
+    max-width: 600px;
+    background-color: var(--dark-30);
+    border: none;
+    color: var(--gray);
+}
+
+.custom-header {
+    background-color: var(--dark-20);
+}
+
+.blog-post{
+    background-color: var(--dark-20);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.blog-post-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-date{
+    color: var(--brand-color);
+}
+
+.blog-post-title{
+    color: var(--white);
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.blog-post-text{
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.card-text, .text-muted {
+    color: var(--gray);
+}
+  
+.bi-heart {
+    color: var(--gray);
+}
