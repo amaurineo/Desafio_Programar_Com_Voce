@@ -35,7 +35,7 @@ h6 {
 }
 
 .custom-input{
-    max-width: 600px;
+    max-width: 1300px;
     background-color: var(--dark-30);
     border: none;
     color: var(--gray);
@@ -49,6 +49,8 @@ h6 {
     background-color: var(--dark-20);
     padding: 1rem;
     border-radius: 0.5rem;
+    border: 1px solid transparent;
+    position: relative;
 }
 
 .blog-post-body {
@@ -70,11 +72,32 @@ h6 {
     color: var(--gray);
     font-size: 1rem;
 }
-
-.card-text, .text-muted {
-    color: var(--gray);
-}
   
-.bi-heart {
-    color: var(--gray);
+.bi-heart .bi-heart-fill {
+    color: var(--brand-color);
+    cursor: pointer;
+}
+
+.heart-icon {
+ font-size: 1.5rem;
+}
+
+.border-brand {
+    border-color: var(--brand-color);
+}
+
+@media (max-width: 768px) {
+    .custom-input{
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-input{
+        max-width: 350px;
+    }
+
+    .blog-post{
+        max-width: 350px;
+    }
 }
