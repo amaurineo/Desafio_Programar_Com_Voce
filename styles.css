@@ -11,38 +11,30 @@
   --gray: #afabb6;
   --white: #ffffff;
 }
-
-body.custom-bg {
-  background-color: var(--dark-10);
-  font-family: "Inter", sans-serif;
+body {
+    font-family: "Inter", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Space Grotesk", sans-serif;
+.custom-bg {
+  background-color: var(--dark-10);
+}
+
+.custom-header {
+    background-color: var(--dark-20);
 }
 
 .custom-text, spam{
     color: var(--white);
 }
 
-.text-brand{
+.text-brand, .blog-post-date{
     color: var(--brand-color);
 }
 
 .custom-input{
-    max-width: 1300px;
     background-color: var(--dark-30);
     border: none;
     color: var(--gray);
-}
-
-.custom-header {
-    background-color: var(--dark-20);
 }
 
 .blog-post{
@@ -51,15 +43,6 @@ h6 {
     border-radius: 0.5rem;
     border: 1px solid transparent;
     position: relative;
-}
-
-.blog-post-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.blog-post-date{
-    color: var(--brand-color);
 }
 
 .blog-post-title{
@@ -72,32 +55,16 @@ h6 {
     color: var(--gray);
     font-size: 1rem;
 }
-  
+
+.heart-icon {
+    font-size: 1.5rem;
+}
+
 .bi-heart .bi-heart-fill {
     color: var(--brand-color);
     cursor: pointer;
 }
 
-.heart-icon {
- font-size: 1.5rem;
-}
-
 .border-brand {
     border-color: var(--brand-color);
-}
-
-@media (max-width: 768px) {
-    .custom-input{
-        max-width: 700px;
-    }
-}
-
-@media (max-width: 576px) {
-    .custom-input{
-        max-width: 350px;
-    }
-
-    .blog-post{
-        max-width: 350px;
-    }
 }

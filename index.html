@@ -11,68 +11,63 @@
 </head>
 <!-- Aplicação de classes de estilização customizadas -->
 <body class="custom-bg custom-text" >
-    <!-- py = padding do eixo y, w = width, d-flex = display flex, o resto é auto explicativo-->
-    <div class="py-4 custom-header w-100 d-flex align-items-center flex-column ">
-        <h1 class="text-brand">Code<spam>Lab</spam></h1>
-        <!-- form-control é uma estilização do bootstrap
-             ; my = margem do eixo y-->
-        <input type="text" id="searchInput" class="form-control custom-input w-60 my-3" placeholder="pesquisar no blog">
-    </div>
-    <!-- container é um component do bootstrap; mt = margin-top; mp = margin-bottom -->
-    <div class="container mt-4 d-flex align-items-center flex-column">
-        <div class="blog-post mb-3">
-            <i class="bi bi-heart float-end text-brand heart-icon" onclick="toggleHeart(this)"></i>
-            <div class="blog-post-body">
-                <p class="blog-post-date">17 de ago, 2024</p>
-                <h5 class="blog-post-title">O que é linguagem de programação? Conheça as principais</h5>
-                <p class="blog-post-text">Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando.</p>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- py = padding do eixo y, w = width, d-flex = display flex, o resto é auto explicativo-->
+            <div class="custom-header py-4 d-flex align-items-center flex-column ">
+                <h1 class="text-brand">Code<spam>Lab</spam></h1>
+                <!-- form-control é uma estilização do bootstrap
+                ; my = margem do eixo y-->
+                <div class="col-12 col-md-8">
+                    <input type="text" id="searchInput" class="form-control custom-input my-3" placeholder="pesquisar no blog">
+                </div>
             </div>
         </div>
-        <div class="blog-post mb-3">
-            <i class="bi bi-heart float-end text-brand heart-icon" onclick="toggleHeart(this)"></i>
-            <div class="blog-post-body">
-                <p class="blog-post-date">12 de jul, 2024</p>
-                <h5 class="blog-post-title">GitHub agora permite fazer login sem precisar de senha</h5>
-                <p class="blog-post-text">O GitHub anunciou nesta quarta-feira (12) o acesso a partir das passkeys, método de autenticação sem senhas. A novidade está disponível em uma versão beta pública e pode substituir a autenticação em dois fatores.</p>
+
+        <!-- mt = margin-top -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 col-md-8">
+                <div class="blog-post mb-3">
+                    <i class="bi bi-heart float-end text-brand heart-icon" onclick="toggleHeart(this)"></i>
+                    <div class="d-flex flex-column">
+                        <p class="blog-post-date">17 de ago, 2024</p>
+                        <h5 class="blog-post-title">O que é linguagem de programação? Conheça as principais</h5>
+                        <p class="blog-post-text">Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="blog-post mb-3">
-            <i class="bi bi-heart float-end text-brand heart-icon" onclick="toggleHeart(this)"></i>
-            <div class="blog-post-body">
-                <p class="blog-post-date">21 de jun, 2024</p>
-                <h5 class="blog-post-title">Por que os hyperlinks são azuis em sua maioria?</h5>
-                <p class="blog-post-text">Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hyperlinks – uma palavra ou termo clicável que direciona o leitor.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="blog-post mb-3">
+                    <i class="bi bi-heart float-end text-brand heart-icon" onclick="toggleHeart(this)"></i>
+                    <div class="d-flex flex-column">
+                        <p class="blog-post-date">12 de jul, 2024</p>
+                        <h5 class="blog-post-title">GitHub agora permite fazer login sem precisar de senha</h5>
+                        <p class="blog-post-text">O GitHub anunciou nesta quarta-feira (12) o acesso a partir das passkeys, método de autenticação sem senhas. A novidade está disponível em uma versão beta pública e pode substituir a autenticação em dois fatores.</p>
+                    </div>
+                </div>
             </div>
+        </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <div class="blog-post mb-3">
+                <i class="bi bi-heart float-end text-brand heart-icon" onclick="toggleHeart(this)"></i>
+                <div class="d-flex flex-column">
+                    <p class="blog-post-date">21 de jun, 2024</p>
+                    <h5 class="blog-post-title">Por que os hyperlinks são azuis em sua maioria?</h5>
+                    <p class="blog-post-text">Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hyperlinks – uma palavra ou termo clicável que direciona o leitor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzlgIDhU5nE1Q1zEFI8Lg2ndbId1BXU0u+gy9r65y/+N" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ho+j7jyWK8fNQe+A1EFfWxKahPvCkM4lZhbGOxBDrFP/72lbPp+2Zsl6z/0ZIiQK" crossorigin="anonymous"></script>
-    <script>
-        function toggleHeart(icon) {
-            icon.classList.toggle('bi-heart');
-            icon.classList.toggle('bi-heart-fill');
-            icon.closest('.blog-post').classList.toggle('border-brand');
-        }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded',function(){
-            const searchInput = document.getElementById('searchInput');
-            const blogPosts = document.querySelectorAll('.blog-post');
-
-            searchInput.addEventListener('input',function() {
-                const query = searchInput.value.toLowerCase();
-
-                blogPosts.forEach(post => {
-                    const title = post.querySelector('.blog-post-title').textContent.toLowerCase();
-                const text = post.querySelector('.blog-post-text').textContent.toLowerCase();
-
-                if(title.includes(query) || text.includes(query)){
-                    post.style.display = 'block';
-                }else{
-                    post.style.display = 'none';
-                }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
